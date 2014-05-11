@@ -3,5 +3,5 @@ hpcdt <- transform(subset(hpcraw[complete.cases(hpcraw),],Date == '1/2/2007' | D
 
 hist(as.numeric(levels(hpcdt$Global_active_power)[levels(hpcdt$Global_active_power) != '?'])[hpcdt$Global_active_power],col="red",main="Global Active Power",xlab = "Global Active Power (kilowatts)")
 
-dev.copy(png,"plot1.png", width=480, height=480)
+dev.copy(png,'plot1.png', width = 480, height = 480, units = "px")
 dev.off()
