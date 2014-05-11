@@ -1,4 +1,4 @@
-hpcraw <- read.csv("~/Documents/exdata-002/household_power_consumption.txt", sep=";”)
+hpcraw <- read.csv("household_power_consumption.txt", sep=";”)
 
 hpcdt <- transform(subset(hpcraw[complete.cases(hpcraw),],Date == '1/2/2007' | Date == '2/2/2007'),DateTime = strptime(paste(Date,Time),"%d/%m/%Y %H:%M:%S”))
 
